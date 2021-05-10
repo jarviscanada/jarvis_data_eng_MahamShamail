@@ -3,14 +3,16 @@
 #start docker daemon if it is not running already.
 sudo systemctl status docker || systemctl start docker
 
-#pull the postgres docker image
+#pull the postgres docker image (if creating)
 docker pull postgres
 
 #save command line arguments as variables
-container_name="jrvs-psql"
 user_action_arg=$1 # create | start | stop
 db_username=$2
 db_password=$3
+container_name="jrvs-psql"
+container_is_created=$(docker container ls -a -f name=jrvs-psql | wc -l);
+
 
 #case statements: create | start | stop | invalid
 case "$user_action_arg" in
@@ -25,7 +27,6 @@ case "$user_action_arg" in
       fi
 
       #check if container is already created, if so exit with 1
-      container_is_created='docker ls -a -f name=jrvs-psql | wc -l'; #-f is to filter, wc -l prints length
       if [ "$container_is_created" -eq 2 ];
       then
         echo "ERROR: Container $container_name already exists. Exiting program."
@@ -52,7 +53,6 @@ case "$user_action_arg" in
     fi
 
     #check if docker container exists, if not exit with code 1
-    container_is_created='docker ls -a -f name=jrvs-psql | wc -l';
     if [ "$container_is_created" -ne 2 ];
     then
       echo "ERROR: Container jrvs-psql does not exist! Exiting script. :("
@@ -75,7 +75,6 @@ case "$user_action_arg" in
     fi
 
     #check if docker container exists, if not exit with code 1
-    container_is_created='docker ls -a -f name=jrvs-psql | wc -l';
     if [ "$container_is_created" -ne 2 ];
     then
       echo "ERROR: Container $container_name does not exist! Exiting script. :("
