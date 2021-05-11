@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#start docker daemon if it is not running already.
-sudo systemctl status docker || systemctl start docker
-
-#pull the postgres docker image (if creating)
-docker pull postgres
-
 #save command line arguments as variables
 user_action_arg=$1 # create | start | stop
 db_username=$2
@@ -13,6 +7,8 @@ db_password=$3
 container_name="jrvs-psql"
 container_is_created=$(docker container ls -a -f name=jrvs-psql | wc -l);
 
+#start docker daemon if it is not running already.
+sudo systemctl status docker || systemctl start docker
 
 #case statements: create | start | stop | invalid
 case "$user_action_arg" in
@@ -32,6 +28,9 @@ case "$user_action_arg" in
         echo "ERROR: Container $container_name already exists. Exiting program."
         exit 1
       fi
+
+      #pull the postgres docker image (if creating)
+      docker pull postgres
 
       #create a new docker volume
       docker volume create pgdata
@@ -61,7 +60,7 @@ case "$user_action_arg" in
 
     #start docker container
     docker container start "$container_name"
-    echo "Docker container initialised successfully! :D"
+    exit $?
   ;;
 
   #stop case
@@ -83,12 +82,10 @@ case "$user_action_arg" in
 
     # stop docker container
     docker container stop "$container_name"
-    echo "Docker container $container_name stopped successfully."
+    exit $?
   ;;
   *)
     #invalid argument
   echo "ERROR: Argument 1 not provided or is invalid."
   exit 1
 esac
-
-exit 0;
