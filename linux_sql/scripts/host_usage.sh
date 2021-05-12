@@ -28,11 +28,11 @@ echo "cpu_idle =$cpu_idle"
 echo "cpu_kernel =$cpu_kernel"
 echo "disk_io =$disk_io"
 echo "disk_available =$disk_available"
-#insert_stmt="INSERT INTO host_usage (timestamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available)
- # SELECT '$timestamp', host_info.id, '$memory_free', '$cpu_idle', '$cpu_kernel', '$disk_io', '$disk_available'
- # FROM host_info
-#  WHERE host_info.hostname='$psql_host';"
+insert_stmt="INSERT INTO host_usage (timestamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available)
+SELECT '$timestamp', host_info.id, '$memory_free', '$cpu_idle', '$cpu_kernel', '$disk_io', '$disk_available'
+FROM host_info
+WHERE host_info.hostname='$psql_host';"
 
-#psql -h "$psql_host" -p "$psql_port" -d "$db_name" -U "$psql_user" -c "$insert_stmt"
+psql -h "$psql_host" -p "$psql_port" -d "$db_name" -U "$psql_user" -c "$insert_stmt"
 
 exit $?
