@@ -1,14 +1,31 @@
 # Linux Cluster Monitoring Agent
 
 ## Introduction
+Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP) that consists of a set of software tools. LCMA is designed to automate the collection, persistence and real-time monitoring of hardware specifications and resource usage data of all the nodes within a cluster of linux servers.
+
+LCMA has numerous applications. It can be used by Network / System Adminstrators and Analysts to detect network and system failures. It can be used to analyse hardware resourse usage. Based on this important decisions can be made about the risks, challenges and opportunities of network load distribution and balancing within a cluster of linux servers. 
+
+The   project makes use of an array of different technologies: Linux Bash CLI, Docker, PSQL, Git
+(e.g. CentOS, bash CLI, docker, PSQL, SQL, DDL, DML, git, gitflow etc..)
+
 
 ### Quick Start
+- Prerequisites: on a linux enterprise system, have docker installed
+- Start a psql instance using psql_docker.sh
+- make sure your file is executable 
+- create a docker container, start or stop it
+- Create tables using ddl.sql
+- Insert hardware specs data into the db using host_info.sh
+- Insert hardware usage data into the db using host_usage.sh
+- Crontab setup
 
 ## Implementation
 
 ### Architecture
 
 ![linux_sql_arch](https://user-images.githubusercontent.com/50436238/118318188-04fb4600-b4c7-11eb-9b86-316be03e5a2a.png)
+
+### Scripts
 
 ### Database Modeling
 
@@ -36,3 +53,7 @@ cpu_idle| SMALLINT NOT NULL
 cpu_kernel| SMALLINT NOT NULL
 disk_io| INTEGER NOT NULL
 disk_available| INTEGER NOT NULL
+
+## Tests
+
+## Improvements
