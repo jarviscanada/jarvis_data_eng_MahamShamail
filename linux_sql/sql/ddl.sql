@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_info(
 --host_usage: to store resource usage data
 CREATE TABLE IF NOT EXISTS PUBLIC.host_usage(
     timestamp TIMESTAMP NOT NULL,
-    host_id SERIAL NOT NULL REFERENCES host_ifo (id),
+    host_id SERIAL NOT NULL REFERENCES host_info (id),
     memory_free INTEGER NOT NULL,
     cpu_idle SMALLINT NOT NULL,
     cpu_kernel SMALLINT NOT NULL,
