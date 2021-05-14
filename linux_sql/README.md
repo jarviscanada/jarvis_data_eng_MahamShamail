@@ -14,13 +14,25 @@
 
 Column Names | Data Types
 ------------ | -------------
-id| Content from cell 2
-hostname| Content from cell 2
-cpu_number| Content from cell 2
-cpu_architecture| Content from cell 2
-cpu_model| Content from cell 2
-cpu_mhz| Content from cell 2
-L2_cache| Content from cell 2
-timestamp | Content from cell 2
+id| SERIAL PRIMARY KEY NOT NULL
+hostname| UNIQUE VARCHAR NOT NULL
+cpu_number| INTEGER NOT NULL
+cpu_architecture| VARCHAR NOT NULL
+cpu_model| VARCHAR NOT NULL
+cpu_mhz| NUMERIC NOT NULL
+L2_cache| INTEGER NOT NULL
+total_mem| INTEGER NOT NULL,
+timestamp | TIMESTAMP NOT NULL
 
 
+
+Column Names | Data Types
+------------ | -------------
+id| SERIAL PRIMARY KEY NOT NULL
+timestamp| TIMESTAMP NOT NULL
+host_id| SERIAL NOT NULL FORIEGN KEY host_info id
+memory_free| INTEGER NOT NULL
+cpu_idle| SMALLINT NOT NULL
+cpu_kernel| SMALLINT NOT NULL
+disk_io| INTEGER NOT NULL
+disk_available| INTEGER NOT NULL
