@@ -1,9 +1,9 @@
 # Linux Cluster Monitoring Agent
 
 ## Introduction
-``` diff
-+ **Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP) that consists of a set of software tools.**
-```
+
+#### _**Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP) that consists of a set of software tools.**_
+
 
 LCMA is designed to automate the **_collection_**, **_persistence_** and **_real-time monitoring_** of hardware specifications and resource usage data of all the nodes within a cluster of linux servers.
 
