@@ -5,14 +5,14 @@
 _Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP). It consists of a set of software tools. LCMA is designed to automate the collection, persistence and real-time monitoring of hardware specifications and resource usage data of all the nodes within a cluster of linux servers._
 
 #### **LCMA has countless applications:**
-It can be utilised by Network or System Adminstrators and Analysts to catch network and system failures. It delivers additional value when used to analyse hardware resourse usage and redundacy of servers in a linux cluster. Consequently, important conclusion can be drawn about the risks, challenges and opportunities related to network resource distribution and load balancing within a cluster of linux servers. 
+It can be utilised by Network or System Adminstrators and Analysts to catch network and system failures. It delivers additional value when used to analyse hardware resourse usage and redundacy of servers in a linux cluster. Consequently, important conclusion can be drawn about the risks, challenges and opportunities related to network resource distribution and load balancing within the cluster. 
 
 The LCMA software toolset is implemented using the iterative/incremental `SCRUM`  framework. Which allows the incorporation of `Agile` software development life cycle `(SDLC)` methodologies. 
 
 #### **Array of softwares / technologies that form the foundations of the LCMA are:**
 - **Google Cloud Platform VM instance:** 
 - **Linux Cent Os 7:** for development, closest to red hat enterprise linux
-- **Linux Bash Scripts and CLI:**  The main scripts `psql_docker.sh`, `host_info.sh`,`host_usage.sh` are implemented using Bash scripting language, command line tools (`crontab`), character encoding and regex.
+- **Linux Bash Scripts and CLI:**  The main scripts `psql_docker.sh`, `host_info.sh`,`host_usage.sh` are implemented using Bash scripting language, command line tools (`crontab`), character encoding and regex to automate the creation, initialisation of docker psql container as well as the collection and insertion of data into the host_agent database.
 - **Docker and PostgreSQL:** docker container, image and volume are used to contain the PostgreSQL server processes that enable the persistence and queryiing of data 
 - **Git, GitHub and Gitflow:**
 
