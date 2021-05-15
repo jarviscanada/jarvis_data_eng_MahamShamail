@@ -2,17 +2,18 @@
 
 ## Introduction
 
-#### _**Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP) that consists of a set of software tools.**_
+#### _**Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP) that consists of a set of software tools.**_ LCMA is designed to automate the **_collection_**, **_persistence_** and **_real-time monitoring_** of hardware specifications and resource usage data of all the nodes within a cluster of linux servers.
 
+**LCMA has countless applications:**
+It can be utilised by Network or System Adminstrators and Analysts to catch network and system failures. It delivers additional value when used to analyse hardware resourse usage and redundacy. Consequently, important conclusion can be drawn about the risks, challenges and opportunities related to network resource distribution and load balancing within a cluster of linux servers. 
 
-LCMA is designed to automate the **_collection_**, **_persistence_** and **_real-time monitoring_** of hardware specifications and resource usage data of all the nodes within a cluster of linux servers.
+The LCMA software toolset is implemented using the iterative/incremental **SCRUM** framework. Which allows the incorporation of Agile **software development life cycle (SDLC)** methodologies. 
 
-
-**LCMA has numerous applications:**
-It can be utilised by Network and System Adminstrators and Analysts to catch network and system failures. It can be used to analyse hardware resourse usage and redundacies. Consequently, important decisions can be made about the risks, challenges and opportunities related to network load distribution and balancing within a cluster of linux servers. 
-
-The LCMA software toolset is implemented using the iterative **SCRUM** framework. Which allows the incorporation of Agile **software development life cycle (SDLC)** methodologies. project makes use of an array of different technologies: Linux Bash CLI, Docker, PSQL, Git
-(e.g. CentOS, bash CLI, docker, PSQL, SQL, DDL, DML, git, gitflow etc..)
+**The array of softwares and technologies that form the foundations of the LCMA are:**
+1. Linux Bash CLI
+2. Docker
+3. PSQL
+4. Git
 
 
 ### Quick Start
