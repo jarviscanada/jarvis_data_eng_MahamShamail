@@ -2,12 +2,12 @@
 
 ## Introduction
 
-_Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP). It consists of a set of software tools. LCMA is designed to automate the collection, persistence and real-time monitoring of hardware specifications and resource usage data of all the nodes within a cluster of linux servers._
+_**Linux Cluster Monitoring Agent (LCMA)** is a minimum viable product **(MVP)**. It consists of a set of software tools. LCMA is designed to automate the collection, persistence and real-time monitoring of hardware specifications and resource usage data of all the nodes within a cluster of linux servers._
 
 #### **LCMA has countless applications:**
 It can be utilised by Network or System Adminstrators and Analysts to catch network and system failures. It delivers additional value when used to analyse hardware resourse usage and redundacy of servers in a linux cluster. Consequently, important conclusion can be drawn about the risks, challenges and opportunities related to network resource distribution and load balancing within the cluster. 
 
-The LCMA software toolset is implemented using the iterative/incremental `SCRUM`  framework. Which allows the incorporation of `Agile` software development life cycle `(SDLC)` methodologies. 
+The LCMA software toolset is implemented using the iterative/incremental **SCRUM**  framework. Which allows the incorporation of **Agile** software development life cycle (**SDLC**) methodologies. 
 
 #### **Array of softwares / technologies that form the foundations of the LCMA are:**
 - **Google Cloud Platform VM instance:** 
@@ -52,30 +52,30 @@ The LCMA software toolset is implemented using the iterative/incremental `SCRUM`
 
 ### Database Modeling
 
-Column Names | Data Types
------------- | -------------
-id| SERIAL PRIMARY KEY NOT NULL
-hostname| UNIQUE VARCHAR NOT NULL
-cpu_number| INTEGER NOT NULL
-cpu_architecture| VARCHAR NOT NULL
-cpu_model| VARCHAR NOT NULL
-cpu_mhz| NUMERIC NOT NULL
-L2_cache| INTEGER NOT NULL
-total_mem| INTEGER NOT NULL,
-timestamp | TIMESTAMP NOT NULL
+COLUMN NAMES | DATA TYPES | DATA CONSTRAINTS
+------------ | -------------| -------------
+`id`| SERIAL| PRIMARY KEY _and_ NOT NULL
+`hostname`| VARCHAR | UNIQUE _and_ NOT NULL
+`cpu_number`| INTEGER | NOT NULL
+`cpu_architecture`| VARCHAR | NOT NULL
+`cpu_model`| VARCHAR | NOT NULL
+`cpu_mhz`| NUMERIC | NOT NULL
+`L2_cache`| INTEGER | NOT NULL
+`total_mem`| INTEGER | NOT NULL,
+`timestamp` | TIMESTAMP | NOT NULL
 
 
 
-Column Names | Data Types
------------- | -------------
-id| SERIAL PRIMARY KEY NOT NULL
-timestamp| TIMESTAMP NOT NULL
-host_id| SERIAL NOT NULL FORIEGN KEY host_info id
-memory_free| INTEGER NOT NULL
-cpu_idle| SMALLINT NOT NULL
-cpu_kernel| SMALLINT NOT NULL
-disk_io| INTEGER NOT NULL
-disk_available| INTEGER NOT NULL
+COLUMN NAMES | DATA TYPES | DATA CONSTRAINTS
+------------ | -------------| -------------
+`id`| SERIAL| PRIMARY KEY _and_ NOT NULL
+`timestamp`| TIMESTAMP | NOT NULL
+`host_id`| INTEGER | SERIAL _and_ NOT NULL _and_ FORIEGN KEY _as_ host_info.id
+`memory_free`| INTEGER | NOT NULL
+`cpu_idle`| SMALLINT | NOT NULL
+`cpu_kernel`| SMALLINT | NOT NULL
+`disk_io`| INTEGER | NOT NULL
+`disk_available`| INTEGER | NOT NULL
 
 ## Tests
 
