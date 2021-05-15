@@ -2,30 +2,45 @@
 
 ## Introduction
 
-#### _**Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP) that consists of a set of software tools.**_ 
-LCMA is designed to automate the **_collection_**, **_persistence_** and **_real-time monitoring_** of hardware specifications and resource usage data of all the nodes within a cluster of linux servers.
+_Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP). It consists of a set of software tools. LCMA is designed to automate the collection, persistence and real-time monitoring of hardware specifications and resource usage data of all the nodes within a cluster of linux servers._
 
-##### **LCMA has countless applications:**
+#### **LCMA has countless applications:**
 It can be utilised by Network or System Adminstrators and Analysts to catch network and system failures. It delivers additional value when used to analyse hardware resourse usage and redundacy. Consequently, important conclusion can be drawn about the risks, challenges and opportunities related to network resource distribution and load balancing within a cluster of linux servers. 
 
-The LCMA software toolset is implemented using the iterative/incremental **SCRUM** framework. Which allows the incorporation of Agile **software development life cycle (SDLC)** methodologies. 
+The LCMA software toolset is implemented using the iterative/incremental `SCRUM`  framework. Which allows the incorporation of `Agile` software development life cycle `(SDLC)` methodologies. 
 
-##### **The array of softwares and technologies that form the foundations of the LCMA are:**
-1. Linux Bash CLI
-2. Docker
-3. PSQL
-4. Git
+#### **Array of softwares / technologies that form the foundations of the LCMA are:**
+- **Google Cloud Platform VM instance:** 
+- **Linux Cent Os 7:** for development, closest to red hat enterprise linux
+- **Linux Bash Scripts and CLI:**  The main scripts `psql_docker.sh`, `host_info.sh`,`host_usage.sh` are implemented using Bash scripting language, command line tools (`crontab`), character encoding and regex.
+- **Docker and PostgreSQL:** docker container, image and volume are used to contain the PostgreSQL server processes that enable the persistence and queryiing of data 
+- **Git, GitHub and Gitflow:**
 
 
 ### Quick Start
-- Prerequisites: on a linux enterprise system, have docker installed
-- Start a psql instance using psql_docker.sh
-- make sure your file is executable 
-- create a docker container, start or stop it
-- Create tables using ddl.sql
-- Insert hardware specs data into the db using host_info.sh
-- Insert hardware usage data into the db using host_usage.sh
-- Crontab setup
+&#x1F53D; _**Prerequisites:** on a linux system that has docker installed_
+1. Make sure your bash files are executable 
+2. Create, start or stop a docker container containing a psql instance using psql_docker.sh 
+```diff 
+      bash ./scripts/psql_docker.sh start|stop|create [db_username][db_password]
+```
+3. Create tables using ddl.sql
+```diff 
+      bash psql -h localhost -p 5432 -U db_username -f ./sql/ddl.sql
+```
+4. Insert hardware specs data into the db using host_info.sh
+```diff     
+      bash ./scripts/host_info.sh localhost 5432 db_name db_username db_password
+```
+5. Insert hardware usage data into the db using host_usage.s 
+```diff     
+      bash ./scripts/host_usage.sh localhost 5432 db_name db_username db_password
+```
+6. Crontab setup
+```diff
+   crontab -e
+   * * * * * bash ~full_path~/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log
+```
 
 ## Implementation
 
