@@ -27,7 +27,7 @@ The **`LCMA`** software toolset is implemented using the iterative/incremental *
       bash ./scripts/psql_docker.sh start|stop|create [db_username][db_password]
       
       db_username = postgres
-      db_password - password
+      db_password = password
 ```
 3. Login to your PSQL server using the Linux CLI, password is "password"
 ```console 
@@ -91,7 +91,7 @@ The image below depicts that a bash script `psql_docker.sh` creates, starts or s
       bash ./scripts/psql_docker.sh start|stop|create [db_username][db_password]
       
       db_username = postgres
-      db_password - password
+      db_password = password
 ```
 - **`ddl.sql`** 
    >  This script will assume that you have created a database within your PostgreSQL server. 
