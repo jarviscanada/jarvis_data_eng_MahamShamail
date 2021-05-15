@@ -2,14 +2,15 @@
 
 ## Introduction
 
-#### _**Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP) that consists of a set of software tools.**_ LCMA is designed to automate the **_collection_**, **_persistence_** and **_real-time monitoring_** of hardware specifications and resource usage data of all the nodes within a cluster of linux servers.
+#### _**Linux Cluster Monitoring Agent (LCMA) is a minimum viable product (MVP) that consists of a set of software tools.**_ 
+LCMA is designed to automate the **_collection_**, **_persistence_** and **_real-time monitoring_** of hardware specifications and resource usage data of all the nodes within a cluster of linux servers.
 
-**LCMA has countless applications:**
+##### **LCMA has countless applications:**
 It can be utilised by Network or System Adminstrators and Analysts to catch network and system failures. It delivers additional value when used to analyse hardware resourse usage and redundacy. Consequently, important conclusion can be drawn about the risks, challenges and opportunities related to network resource distribution and load balancing within a cluster of linux servers. 
 
 The LCMA software toolset is implemented using the iterative/incremental **SCRUM** framework. Which allows the incorporation of Agile **software development life cycle (SDLC)** methodologies. 
 
-**The array of softwares and technologies that form the foundations of the LCMA are:**
+##### **The array of softwares and technologies that form the foundations of the LCMA are:**
 1. Linux Bash CLI
 2. Docker
 3. PSQL
