@@ -49,7 +49,7 @@
   "jarvis_projects": [
     {
       "description": "Developed a Linux Cluster Monitoring Agent (LCMA) software toolset. Designed LCMA to automate the collection, persistence and real-time monitoring of hardware specifications and resource usage data of all the nodes within a cluster of linux servers. Used CentOS 7 Google Cloud VM to develop and tests Bash scripts. Automated a bash script to create, start and stop a Docker contained PostgreSQL Server for data persistence. Implemented Bash CLI 'lscpu' and 'vmstd' commands to collect hardware specifications and resource usage data in two seperate Bash scripts. The resource usage data is automated to be collected in real time using 'crontab' script. Wrote SQL queries to perform data analysis, for example for identifying host failure, etc. Each feature was iteratively developed on GitHub on a seperate feature branch and later released after code reviews from a senior developer. All the scripts were tested to fail-fast on a single server, as well as manually. Followed best practicess of Gitflow, Scrum Framework and Agile through out the development, testing and deployment of this project.",
-      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_MahamShamail/tree/master/linux_sql",
+      "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
     {
@@ -97,7 +97,7 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Learned and followed Scrum/Agile best practices during daily scrum meetings, bi-weekly sprint meetings. Collaborated with Product Owner, Scrum Master and Senior Developers to design, develop, test and deploy a Linux Cluster Monitoring Agent. Automated the collection, persistence and monitoring of hardware and resource usage real time data. Analysed data using SQL queries to detect host failure.",
+      "description": "Learned and followed Scrum/Agile best practices during daily scrum meetings and bi-weekly sprint meetings. Collaborated with Product Owner, Scrum Master and Senior Developers to design, develop, test and deploy a Linux Cluster Monitoring Agent. Automated the collection, persistence and monitoring of hardware and resource usage real time data. Analysed data using SQL queries to detect host failure.",
       "duration": "2021-present",
       "title": "Software Developer"
     },
