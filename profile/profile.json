@@ -1,0 +1,144 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "Dean's List (2020, 2021): In the Dean's List for consecutive two semesters",
+        "GPA: 3.76/4.0"
+      ],
+      "degree": "Post Graduate Certificate",
+      "department": "Mobile Application Development and Strategy",
+      "duration": "2020-2021",
+      "school_name": "George Brown College"
+    },
+    {
+      "awards_achievements": null,
+      "degree": "Bachelors in Science",
+      "department": "Computer Science",
+      "duration": "2015-2019",
+      "school_name": "Institute of Business Administration"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_MahamShamail",
+  "highlighted_projects": [
+    {
+      "description": "Designed aand developed a restaurant website using JavaScript, HTML5, CSS and JQuery. Integrated the following features into the App - user profile registeration, login, log out, food menu API integration, menu filtering based on category and price, add to cart and checkout functionality. Live link - \"https://mahamshamail.github.io\"",
+      "git_url": "https://github.com/mahamshamail/mahamshamail.github.io",
+      "name": "MahamEats: A restaurant Web app"
+    },
+    {
+      "description": "Designed aand developed a portfolio website from scratch using Javascript, HTML and CSS and hosted it using AWS.  Live link - \"https://mahamshamail.s3.ca-central-1.amazonaws.com/index.html\"",
+      "git_url": "https://github.com/mahamshamail/Portfolio",
+      "name": "Portfolio Website"
+    },
+    {
+      "description": "Developed a single page contact React.js web App, pulls a list of contacts from an API, has a form to save a new contact to the API and a feature to view contact details once saved. Implemented using Redux principles.",
+      "git_url": "https://github.com/mahamshamail/Contacts_App_React_Redux",
+      "name": "Contacts React.js Web App"
+    },
+    {
+      "description": "Implemented a cross-platform React Native (JavaScript) restaurant mobile application. Fetched a food menu from an API and implemented features to filter menu, add to cart, and checkout.",
+      "git_url": "https://github.com/mahamshamail/restaurant_app_react_native_expo",
+      "name": "Restaurant Mobile Application"
+    },
+    {
+      "description": "Implemented a web using JavaScript, HTML, CSS and JQuery to book seats for different movies and generate a pay slip for booked seats.",
+      "git_url": "https://github.com/mahamshamail/Cinema-Seat-Booker",
+      "name": "Cinema Seat Booking Web App"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": "Developed a Linux Cluster Monitoring Agent (LCMA) software toolset. Designed LCMA to automate the collection, persistence and real-time monitoring of hardware specifications and resource usage data of all the nodes within a cluster of linux servers. Used CentOS 7 Google Cloud VM to develop and tests Bash scripts. Automated a bash script to create, start and stop a Docker contained PostgreSQL Server for data persistence. Implemented Bash CLI 'lscpu' and 'vmstd' commands to collect hardware specifications and resource usage data in two seperate Bash scripts. The resource usage data is automated to be collected in real time using 'crontab' script. Wrote SQL queries to perform data analysis, for example for identifying host failure, etc. Each feature was iteratively developed on GitHub on a seperate feature branch and later released after code reviews from a senior developer. All the scripts were tested to fail-fast on a single server, as well as manually. Followed best practicess of Gitflow, Scrum Framework and Agile through out the development, testing and deployment of this project.",
+      "git_url": "/linux_sql",
+      "name": "Cluster Monitor"
+    },
+    {
+      "description": "",
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
+    },
+    {
+      "description": "",
+      "git_url": "/springboot",
+      "name": "Core Java Apps"
+    },
+    {
+      "description": "",
+      "git_url": "/python_data_anlytics",
+      "name": "Python Data Analytics"
+    },
+    {
+      "description": "",
+      "git_url": "/hadoop",
+      "name": "Hadoop"
+    },
+    {
+      "description": "",
+      "git_url": "/spark",
+      "name": "Spark"
+    },
+    {
+      "description": "",
+      "git_url": "/cloud_devops",
+      "name": "Cloud/DevOps"
+    }
+  ],
+  "name": "Saiyeda Maham Shamail",
+  "others": [
+    {
+      "bullets": [
+        "Art",
+        "Yoga",
+        "Playing Games"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "Learned and followed Scrum/Agile best practices during daily scrum meetings, bi-weekly sprint meetings, collaborated with Product Owner, Scrum Master and Senior Developers to design, develop, test and deploy a Linux Cluster Monitoring Agent. Automated the collection, persistence and monitoring of hardware and resource usage real time data. Analysed data using SQL queries to detect host failure.",
+      "duration": "2021-present",
+      "title": "Software Developer"
+    },
+    {
+      "company": "iMerciv Canada",
+      "description": "Coded approximately 1500 lines of code for mobile application front-end technologies using React Native (JavaScript). Improved GPS accuracy tests by collaborating on Python scripts with the location services team. Achieved 67% unit test code coverage for the React Native components using Jest. Integrated third-party maps on the front-end, as well as native Android and iOS modules to the React Native App. Fetched data from REST APIs and connected to routing servers to send JSON data. ",
+      "duration": "2020-2020",
+      "title": "Mobile Applcation Development Co-op"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "Python (Django)",
+      "React.js and React Native",
+      "Redux",
+      "Google Firebase Cloud",
+      "JQuery",
+      "C/C++"
+    ],
+    "familiar": [
+      "Node.js",
+      "Jest",
+      "MongoDB (NoSQL)",
+      "AWS S3",
+      "Docker"
+    ],
+    "proficient": [
+      "JavaScript",
+      "RDBMS/SQL",
+      "Java",
+      "Android Development",
+      "Linux/Bash",
+      "Agile/Scrum",
+      "Git/GitHub/Gitflow",
+      "HTML5",
+      "XML",
+      "CSS3",
+      "JSON",
+      "Swift (IOS)",
+      "MVC"
+    ]
+  },
+  "summary": "As a software developer I have been programming for the past 5 years, with one year in a professional setting. This has helped me develop exceptional problem solving skills. I have worked with technologies such as JavaScript, React.js, RDBMS (SQL), Redux and Python. I am passionate about learning new languages and technologies and I can do so very quickly."
+}
